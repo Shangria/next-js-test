@@ -7,6 +7,7 @@ type layoutProps = {
     children: ReactNode
 }
 
+
 export const Layout: FC<layoutProps> = ({children}) => {
     return (
         <>

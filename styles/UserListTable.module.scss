@@ -1,5 +1,9 @@
 .users {
-  margin-bottom: 160px;
+  margin-bottom: 40px;
+
+  @media (min-width: 991px) {
+    margin-bottom: 160px;
+  }
 
   h2 {
     font-weight: 600;
@@ -15,16 +19,16 @@
   border: 1px solid #C6C9F8;
 
   thead {
-    @media screen and (max-width: 991px) {
+    @media (max-width: 991px) {
       display: none;
     }
   }
 
   tbody {
     tr {
-      @media screen and (max-width: 991px) {
+      @media (max-width: 991px) {
         display: grid;
-        grid-template-columns: 230px 1fr ;
+        grid-template-columns: 230px 1fr;
 
         td {
           display: flex;
@@ -77,9 +81,43 @@
           }
         }
       }
+
+      @media (max-width: 767px) {
+        grid-template-columns: 265px 1fr;
+
+        td {
+          &:nth-child(1) {
+
+          }
+
+          &:nth-child(2) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 4;
+          }
+
+          &:nth-child(3) {
+            grid-row-end: 1;
+
+          }
+
+          &:nth-child(4) {
+            grid-column-start: 2;
+            grid-row-end: 3;
+          }
+
+          &:nth-child(5) {
+            grid-column-start: 2;
+          }
+
+          &:nth-child(6) {
+            grid-row-start: 1;
+          }
+        }
+      }
     }
   }
-
 
   td,
   th {
@@ -94,30 +132,60 @@
   }
 
   td {
-    padding: 10px;
+    @media (min-width: 768px) {
+      padding: 10px;
+    }
   }
 
   img {
-    border-radius: 50%;
-    margin: 0 auto;
     object-fit: cover;
+    display: block;
+    @media (max-width: 767px) {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      max-width: 265px;
+      max-height: 133px;
+    }
+
+    @media (min-width: 768px) {
+      border-radius: 50%;
+      margin: 0 auto;
+    }
   }
 
   button {
-    background-color: #C6C9F8;
-    color: #101010;
-    border: none;
-    outline: none;
-    border-radius: 15px;
-    padding: 7px 12px;
-    cursor: pointer;
-
-    &:disabled,
-    &[disabled] {
+    display: none;
+    @media (min-width: 768px) {
+      display: block;
       background-color: #C6C9F8;
-      color: #666666;
-      pointer-events: none;
+      color: #101010;
+      border: none;
+      outline: none;
+      border-radius: 15px;
+      padding: 7px 12px;
+      cursor: pointer;
+      font-size: 15px;
+      margin: 0 auto;
+
+      &:disabled,
+      &[disabled] {
+        background-color: #C6C9F8;
+        color: #666666;
+        pointer-events: none;
+      }
     }
+  }
+}
+
+.chatLogo {
+  background: url("../public/ChatImg.png") no-repeat center center;
+  width: 22px;
+  height: 19px;
+  background-size: 100%;
+
+  @media (min-width: 768px) {
+    display: none;
   }
 }
 

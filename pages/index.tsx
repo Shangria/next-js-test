@@ -7,7 +7,7 @@ import {GetServerSideProps} from "next";
 
 const url = 'https://tz.smart-ui.pro';
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async () => {
     const response = await fetch(url);
     const data = await response.json();
 

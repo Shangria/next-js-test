@@ -57,13 +57,20 @@ export const UserListTable: FC<usersTypeProps> = ({usersData}) => {
                                 <td>
                                     {
                                         item.online ?
-                                            <button disabled={false}>
-                                                Chat
-                                            </button>
+                                            <>
+                                                <div className={styles.chatLogo}></div>
+                                                <button disabled={false}>
+                                                    Chat
+                                                </button>
+                                            </>
+
                                             :
-                                            <button disabled={true}>
-                                                Chat
-                                            </button>
+                                            <>
+                                                <div className={styles.chatLogo}></div>
+                                                <button disabled={true}>
+                                                    Chat
+                                                </button>
+                                            </>
                                     }
 
                                 </td>
@@ -72,7 +79,6 @@ export const UserListTable: FC<usersTypeProps> = ({usersData}) => {
                         );
                     })
                 }
-
                 </tbody>
             </table>
         </div>

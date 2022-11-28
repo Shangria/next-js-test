@@ -1,19 +1,19 @@
-import {User} from "../types";
+import {IndexInfo} from "../types";
 import {FC} from "react";
 import Image from 'next/image';
 import styles from "../styles/UserListTable.module.scss";
 
 const titlesTable: string[] = ['photo', 'name', 'status', 'registration', 'age', 'action'];
+const title:string="our users";
 
 type usersTypeProps = {
-    usersData: [User]
+    usersData: [IndexInfo]
 }
 
 export const UserListTable: FC<usersTypeProps> = ({usersData}) => {
-    console.log(usersData);
     return (
         <div className={styles.users}>
-            <h2>our users</h2>
+            <h2>{title}</h2>
             <table className={styles.usersTable}>
                 <thead>
                 <tr>

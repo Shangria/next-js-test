@@ -1,0 +1,67 @@
+.videoItem {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+
+  button {
+    position: relative;
+  }
+}
+
+.videoInfo {
+  h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+
+  p, a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: #0000EE;
+  }
+
+}
+
+.videoBox,
+.videoInfo{
+  width: calc(100% / 2 - 10px);
+}
+
+.videoInfo{
+  text-align: center;
+  padding: 20px 10px;
+  margin-right: 10px;
+}
+
+.videoBox {
+  max-width: 480px;
+  width: 50%;
+  position: relative;
+  height: 0;
+  padding-top: 24.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.youtubeLogo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}

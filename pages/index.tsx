@@ -1,9 +1,10 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import {FC} from "react";
-import {User} from "../types";
+import {IndexInfo} from "../types";
 import {UserListTable} from "../components/UserListTable";
 import {GetServerSideProps} from "next";
+import {Video} from "../components/Video";
 
 const url = 'https://tz.smart-ui.pro';
 
@@ -19,16 +20,17 @@ export const getServerSideProps: GetServerSideProps = async () => {
     }
 
     return {
-        props: {usersData: data.users}
+        props: {usersData: data.users, videoData: data.video},
     };
 };
 
-type usersTypeProps = {
-    usersData: [User]
+type indexPageProps = {
+    usersData: [IndexInfo];
+    videoData: [IndexInfo];
 }
 
 
-const Home: FC<usersTypeProps> = ({usersData}) => {
+const Home: FC<indexPageProps> = ({usersData, videoData}) => {
     return (
         <div className={styles.container}>
             <Head>
@@ -41,9 +43,9 @@ const Home: FC<usersTypeProps> = ({usersData}) => {
             </Head>
 
             <main className={styles.main}>
+                <Video videoData={videoData}/>
                 <UserListTable usersData={usersData}/>
             </main>
-
         </div>
     );
 };

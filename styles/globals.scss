@@ -64,6 +64,11 @@ select {
     font: inherit;
 }
 
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
 
 @media (prefers-reduced-motion: reduce) {
     * {

@@ -48,7 +48,7 @@ export const Video: FC<videoTypeProps> = ({videoData}) => {
                     :
                     <div className={styles.videoBox}>
                         <iframe
-                            src={`https://www.youtube.com/embed/${embed}`}
+                            src={`https://www.youtube.com/embed/${embed}?autoplay=1&mute=1`}
                             frameBorder="0"
                             allow="autoplay"
                             allowFullScreen

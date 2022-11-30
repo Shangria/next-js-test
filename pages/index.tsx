@@ -26,7 +26,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 type indexPageProps = {
     usersData: [IndexInfo];
-    videoData: [IndexInfo];
+    videoData: IndexInfo;
 }
 
 

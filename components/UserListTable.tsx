@@ -72,7 +72,6 @@ export const UserListTable: FC<usersTypeProps> = ({usersData}) => {
                                                 </button>
                                             </>
                                     }
-
                                 </td>
                             </tr>
 
@@ -82,7 +81,6 @@ export const UserListTable: FC<usersTypeProps> = ({usersData}) => {
                 </tbody>
             </table>
         </div>
-
     );
 };
 

@@ -1,11 +1,11 @@
 import {FC, useState} from "react";
-import {IndexInfo} from "../types";
+import {VideoData} from "../types";
 import styles from "../styles/Video.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 
 type videoTypeProps = {
-    videoData: IndexInfo
+    videoData: VideoData
 }
 
 

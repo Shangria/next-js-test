@@ -8,7 +8,6 @@ type videoTypeProps = {
     videoData: VideoData
 }
 
-
 export const Video: FC<videoTypeProps> = ({videoData}) => {
     const {embed, text, link} = videoData || {};
     const [isPlayVideo, setIsPlayVideo] = useState<boolean>(true);

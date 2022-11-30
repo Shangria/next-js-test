@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import {FC} from "react";
-import {IndexInfo} from "../types";
+import {IndexInfo, VideoData} from "../types";
 import {UserListTable} from "../components/UserListTable";
 import {GetServerSideProps} from "next";
 import {Video} from "../components/Video";
@@ -26,7 +26,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 type indexPageProps = {
     usersData: [IndexInfo];
-    videoData: IndexInfo;
+    videoData: VideoData;
 }
 
 

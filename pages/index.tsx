@@ -3,12 +3,12 @@ import styles from '../styles/Home.module.scss';
 import {FC} from "react";
 import {IndexInfo, VideoData} from "../types";
 import {UserListTable} from "../components/UserListTable";
-import {GetServerSideProps} from "next";
+import {GetStaticProps} from "next";
 import {Video} from "../components/Video";
 
 const url = 'https://tz.smart-ui.pro';
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
     const response = await fetch(url);
     const data = await response.json();
 

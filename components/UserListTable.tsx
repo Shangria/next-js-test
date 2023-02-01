@@ -6,10 +6,12 @@ import styles from "../styles/UserListTable.module.scss";
 const titlesTable: string[] = ['photo', 'name', 'status', 'registration', 'age', 'action'];
 const title:string="our users";
 
+
 type usersTypeProps = {
     usersData: [IndexInfo]
 }
 
+console.log('test')
 
 export const UserListTable: FC<usersTypeProps> = ({usersData}) => {
     return (

@@ -10,6 +10,7 @@ type usersTypeProps = {
     usersData: [IndexInfo]
 }
 
+
 export const UserListTable: FC<usersTypeProps> = ({usersData}) => {
     return (
         <div className={styles.users}>

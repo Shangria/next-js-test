@@ -13,6 +13,7 @@ type usersTypeProps = {
 
 console.log('test')
 console.log('test2')
+console.log('test3')
 
 export const UserListTable: FC<usersTypeProps> = ({usersData}) => {
     return (
